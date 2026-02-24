@@ -9,22 +9,16 @@ document.getElementById("parent").addEventListener("click", function (e) {
 
     let currentTab = document.getElementById("heading").innerText.toLowerCase();
 
-
     const element = e.target;
     if (element.tagName === "BUTTON" && element.classList.contains("w-24")) {
         const parent = element.parentNode;
         const chlidren = parent.children;
 
         for (const child of chlidren) {
-            child.classList.remove("btn-primary")
-            if (child === element) {
-                child.classList.add("btn-primary")
-
-            }
-            
+            child.classList.remove("btn-primary");
+            child === element ? child.classList.add("btn-primary") : "";
         }
-        // element.previousElementSibling.classList.remove("btn-primary");
-        // console.log(element.previousElementSibling)
+    
         element.classList.add("btn-primary")
         currentTab = element.id;
         setTabData(jobs, currentTab)
