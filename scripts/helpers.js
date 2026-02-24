@@ -1,28 +1,32 @@
 function setTabData(data, tabName) {
     setHeader(tabName);
-    document.getElementById("accordion-all").innerHTML = ""
-    document.getElementById("accordion-interview").innerHTML = ""
-    document.getElementById("accordion-reject").innerHTML = ""
+    document.getElementById("accordion-all").innerHTML = "";
+    document.getElementById("accordion-interview").innerHTML = "";
+    document.getElementById("accordion-reject").innerHTML = "";
+    const currentTab = document.getElementById(`accordion-${tabName}`);
+    let noData = true;
+
     for (const [key, job] of data.entries()) {
 
         if (tabName === "all") {
+            noData = false;
             let post = makePostView(job, key);
-            document.getElementById(`accordion-${tabName}`).insertAdjacentHTML("beforeend", post);
+            currentTab.insertAdjacentHTML("beforeend", post);
             continue;
         }
         if (job.status === tabName) {
+            noData = false;
             let post = makePostView(job, key);
-            document.getElementById(`accordion-${tabName}`).insertAdjacentHTML("beforeend", post);
+            currentTab.insertAdjacentHTML("beforeend", post);
+            continue;
         }
-        console.log(job);
-        console.log("sdfdf")
-        // if () {
-        //     document.getElementById(`accordion-${tabName}`).innerHTML = "";
-        //     document.getElementById(`accordion-${tabName}`).innerHTML = makeEmptyView()
-
-        // }
 
     }
+    if (noData) {
+        currentTab.innerHTML = "";
+        currentTab.innerHTML = makeEmptyView();
+    }
+
 }
 
 function setCount(data, currentTab = "all") {
@@ -43,8 +47,7 @@ function setCount(data, currentTab = "all") {
 }
 
 function setHeader(tabName) {
-    // console.log(tabName)
-
+    
     document.getElementById("total-jobs").innerText = document.getElementById(`card-${tabName}-jobs`).innerText
     document.getElementById("heading").innerText = tabName;
 
