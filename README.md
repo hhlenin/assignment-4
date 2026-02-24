@@ -27,6 +27,9 @@ setting up the event listener to the target's initial parent with using the conc
 -   Consume less memory
 -   Faster behavior
 
+
 _**5.**_  What is the difference between **preventDefault()** and **stopPropagation()** methods?
-    
-    `preventDefault()` prevent browser's default behavior like submitting a form or opening links `stopPropagation()` stops bubbling up event's to the parent element
+
+`preventDefault()` prevent browser's default behavior like submitting a form or opening links
+
+ `stopPropagation()` stops bubbling up events to the parent element
