@@ -8,6 +8,7 @@
 }
 body {
     padding: 60px 0;
+    min-height: 100vh;
 }
 .text-gray {
     color: #64748B;
@@ -16,4 +17,10 @@ body {
 .container {
     max-width: 70%;
     margin-inline: auto;
+}
+
+@media screen and (max-width: 40rem) {
+    .container {
+        max-width: 90%;
+    }
 }

@@ -1,7 +1,7 @@
 function makePostView(data, key) {
       
     return `<div class="my-4 card w-full bg-base-100 shadow-sm ${(data.status === 'interview') ? 'border-l-8 border-success' : ''} ${(data.status === 'reject') ? 'border-l-8 border-error' : ''}">
-            <div class="card-body space-y-5">
+            <div class="card-body space-y-2.5 md:space-y-5">
               <div class="flex justify-between items-center">
                 <div>
                   <h2 class="text-lg font-semibold">${data.companyName}</h2>
@@ -17,8 +17,8 @@ function makePostView(data, key) {
 
               <p>${data.notes}</p>
               <div class="mt-6">
-                <button data-id=${key} ${(data.status === "interview") ? "disabled" : ''} class="uppercase btn btn-outline btn-success">interview</button>
-                <button data-id=${key} ${(data.status === "reject") ? "disabled" : ''} class="uppercase btn btn-outline btn-error">rejected</button>
+                <button data-id=${key} ${(data.status === "interview") ? "disabled" : ''} class="uppercase btn btn-outline btn-success mb-1.5">interview</button>
+                <button data-id=${key} ${(data.status === "reject") ? "disabled" : ''} class="uppercase btn btn-outline btn-error mb-1.5">rejected</button>
               </div>
             </div>
             </div>`
@@ -31,7 +31,7 @@ function makeEmptyView() {
                             <img src="./assets/file.png" alt="">
                         </div>
                         <div>
-                            <h3 class="text-4xl font-semibold">No jobs available</h3>
+                            <h3 class="sm:text-3xl md:text-4xl font-bold md:font-semibold">No jobs available</h3>
                             <p class="text-gray">Check back soon for new job opportunities</p>
                         </div>
                     </div>
