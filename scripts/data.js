@@ -4,7 +4,7 @@ let jobs = [
     jobTitle: "Senior Software Engineer",
     companyName: "TechCorp Innovations",
     location: "San Francisco, CA (Hybrid)",
-    status: "interview",
+    status: "offered",
     salaryRange: "$140,000 - $160,000",
     notes: "Completed the coding assessment. Awaiting scheduling for the final onsite round.",
   },
@@ -23,7 +23,7 @@ let jobs = [
     jobTitle: "Data Analyst",
     companyName: "DataDriven LLC",
     location: "New York, NY (Onsite)",
-    status: "reject",
+    status: "applied",
     salaryRange: "$90,000 - $110,000",
     
     notes: "Received standard rejection email. They went with an internal candidate.",
@@ -63,7 +63,7 @@ let jobs = [
     jobTitle: "UX Designer",
     companyName: "PixelPerfect",
     location: "London, UK (Remote)",
-    status: "interview",
+    status: "appiled",
     salaryRange: "£60,000 - £75,000",
     contactPerson: null,
     notes: "Portfolio review scheduled for next Tuesday.",
@@ -85,7 +85,7 @@ let jobs = [
     jobTitle: "Full Stack Engineer",
     companyName: "StartupX",
     location: "San Francisco, CA (Onsite)",
-    status: "reject",
+    status: "offerd",
     salaryRange: "$150,000 + Equity",
     contactPerson: {
       "name": "Alex Rivera",
@@ -115,7 +115,7 @@ let jobs = [
     jobTitle: "Mobile Developer (iOS)",
     companyName: "AppMakers",
     location: "Seattle, WA (Onsite)",
-    status: "interview",
+    status: "accepted",
     salaryRange: "$135,000 - $155,000",
     contactPerson: {
       "name": "Emily Chen",
@@ -167,7 +167,7 @@ let jobs = [
     jobTitle: "Cloud Architect",
     companyName: "EnterpriseTech",
     location: "Dallas, TX (Hybrid)",
-    status: "interview",
+    status: "awiting",
     salaryRange: "$160,000 - $190,000",
     contactPerson: {
       "name": "Laura Bates",
